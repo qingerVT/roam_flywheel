@@ -24,3 +24,28 @@ This review proposes several targeted improvements to `instructions.md` and `qua
 - **Ensured Player Avatar Visibility:** A new rule was added under 'Visual Consistency' to mandate that the local player's avatar must always be clearly visible and distinguishable from the environment (e.g., ID 23, 38).
 - **Introduced 'Player Feedback' section:** A new dedicated section was added to address the pervasive issue of missing feedback for player actions. This rule mandates immediate and discernible feedback (visual, UI, audio) for all player inputs like movement, jumping, and coin collection (e.g., ID 4, 8, 14, 24, 28).
 
+
+## Refinement run — 2026-03-23T02:53:43.402347+00:00
+
+- Patterns reviewed : 62
+- Changes proposed  : 9
+- Conflicts flagged : 0
+- Templates read    : system_role.md, instructions.md, quality_defaults.md, agent_rituals.md
+
+### Files touched
+- `quality_defaults.md` — 7 change(s)
+- `instructions.md` — 2 change(s)
+
+### Changelog
+## Changelog Summary
+
+### `quality_defaults.md`
+- **Added 'Core Gameplay Correctness' section:** This new section houses rules for fundamental gameplay elements, ensuring the player avatar is visible and responsive, actions provide immediate feedback, and core objectives are fully functional.
+- **Enhanced 'Visual Consistency':** A new rule mandates a consistent, minimalist low-poly art style with flat shading and a clear color palette across all assets.
+- **Refined 'Mobile Suitability':** The rule now explicitly states that core gameplay mechanics must be functional for a game to be considered mobile-suitable, not just aesthetic elements.
+- **Added 'Player Movement Quality':** A rule was introduced to ensure player movement is consistent, effective, and conducive to progress, addressing issues with erratic or ineffective controls.
+
+### `instructions.md`
+- **Added 'Completion State' rule:** A new rule requires explicit win/lose conditions or a clear progression path towards game completion, addressing ambiguity in game endings.
+- **Added 'Initial Difficulty Curve' rule:** A rule was introduced to ensure the initial game experience (movement, interaction, first objective) is achievable and not an insurmountable barrier to player progress.
+
