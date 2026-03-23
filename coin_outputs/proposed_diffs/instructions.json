@@ -1,0 +1,74 @@
+{
+  "target_file": "instructions.md",
+  "changes": [
+    {
+      "id": "change-001",
+      "target_file": "instructions.md",
+      "type": "addition",
+      "anchor": "Singleplayer fallback: yes (3s timeout)",
+      "new_text": "Completion: The game requires clear win/lose conditions or a well-defined progression path towards a score/collection goal. Open-ended play must still offer visible progression.",
+      "rationale": "Multiple playtesting sessions indicated confusion or inability to progress due to a lack of clear completion states, target scores, or win/lose conditions (e.g., patterns ID 16, 30, 43, 57). Explicitly stating this requirement in the game overview will guide the agent to design games with clearer objectives and progression paths.",
+      "confidence": 0.9,
+      "source_game_ids": [
+        "snapshot_20260322_164926_result",
+        "snapshot_20260322_172327_result",
+        "snapshot_20260322_183038_result",
+        "snapshot_20260322_184137_result",
+        "snapshot_20260322_184437_result",
+        "snapshot_20260322_185724_result",
+        "session"
+      ],
+      "pattern_ids": [
+        16,
+        18,
+        25,
+        30,
+        37,
+        43,
+        47,
+        53,
+        54,
+        57
+      ]
+    },
+    {
+      "id": "change-002",
+      "target_file": "instructions.md",
+      "type": "addition",
+      "anchor": "7. The Colyseus room is always named \"game_room\" \u2014 never change this.",
+      "new_text": "8. Player movement (WASD+jump) and physics (gravity, collision) must be fully functional and responsive, ensuring the player avatar moves and interacts correctly with the game world.\n9. Coin collection must be fully functional: proximity detection should correctly trigger the `collectCoin` client-to-server message, and server-confirmed `coinCollected` events must update the `ctx.scoreState` and dispose of the coin.",
+      "rationale": "Across numerous playtests, the most critical failures involved unresponsive player movement and broken coin collection mechanics (e.g., patterns ID 3, 5, 7, 9, 27, 32, 41, 45, 51). These are fundamental to a platformer. Adding explicit rules under 'Rules for Modifying This Game' emphasizes their necessity and prevents the generation of unplayable games.",
+      "confidence": 1.0,
+      "source_game_ids": [
+        "snapshot_20260322_164926_result",
+        "snapshot_20260322_172327_result",
+        "snapshot_20260322_183038_result",
+        "snapshot_20260322_184137_result",
+        "snapshot_20260322_184437_result",
+        "snapshot_20260322_185724_result",
+        "session"
+      ],
+      "pattern_ids": [
+        3,
+        5,
+        7,
+        9,
+        13,
+        15,
+        22,
+        25,
+        27,
+        29,
+        32,
+        33,
+        35,
+        41,
+        42,
+        45,
+        46,
+        51,
+        54
+      ]
+    }
+  ]
+}
