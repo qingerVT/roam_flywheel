@@ -1,10 +1,10 @@
-# Roam Flywheel — Technical Reference
+# Game Intelligence Flywheel — Technical Reference
 
 ---
 
 ## What this code does (current state)
 
-This repo is a **test harness** for two components of the flywheel: the memory query interface and the template refiner. It is not wired into the Roam codegen pipeline. Its purpose is to validate that both components work correctly in isolation before integration.
+This repo is a **test harness** for two components of the flywheel: the memory query interface and the template refiner. It is not wired into the codegen pipeline. Its purpose is to validate that both components work correctly in isolation before integration.
 
 **The five-stage test loop** (`run.py`):
 
@@ -63,7 +63,7 @@ clearly placed collectibles score 80+ on objective clarity without any tutorial 
 
 The agent uses this to reflect on past successes and failures and course-correct before generating. This is the core flywheel mechanic — the query must be interleaved in generation, not appended after evaluation.
 
-**What needs to be built:** A hook in the codegen call site (wherever the Roam agent receives a spec and begins generating) that calls `query_memory(spec)` and prepends the results to the system prompt.
+**What needs to be built:** A hook in the codegen call site (wherever the agent receives a spec and begins generating) that calls `query_memory(spec)` and prepends the results to the system prompt.
 
 ---
 

@@ -1,4 +1,4 @@
-# Roam Flywheel
+# Game Intelligence Flywheel
 
 **generated game URL → VLM playtester → structured evaluation → memory agent extracts patterns → queryable knowledge base → automatic template refinement → codegen gets smarter over time**
 
@@ -8,7 +8,7 @@
 
 ## What it does
 
-The existing Roam codegen system knows if a game *compiles*. It has no idea if it's *good*. And every generation starts from zero — none of the signal from past games is reused.
+The existing codegen system knows if a game *compiles*. It has no idea if it's *good*. And every generation starts from zero — none of the signal from past games is reused.
 
 This pipeline closes those gaps:
 
@@ -48,15 +48,15 @@ Stage 5: template_refiner  → reads all KB patterns + current codegen templates
 
 ## Modules
 
-| File | Deliverable | Description |
-|---|---|---|
-| `playtester_agent.py` | D1 | Playwright + Gemini VLM game playtester |
-| `evaluator_agent.py` | D1 | Structured 8-dimension evaluator |
-| `memory_agent.py` | D2 | Pattern extractor + SQLite knowledge base |
-| `query.py` | D3 | Semantic query interface over KB |
-| `template_refiner_agent.py` | D4 | Proposes diffs to codegen template `.md` files |
-| `run.py` | D5 | End-to-end pipeline entry point |
-| `FLYWHEEL.md` | D6 | Integration design doc |
+| File | Description |
+|---|---|
+| `playtester_agent.py` | Playwright + Gemini VLM game playtester |
+| `evaluator_agent.py` | Structured 8-dimension evaluator |
+| `memory_agent.py` | Pattern extractor + SQLite knowledge base |
+| `query.py` | Semantic query interface over KB |
+| `template_refiner_agent.py` | Proposes diffs to codegen template `.md` files |
+| `run.py` | End-to-end pipeline entry point |
+| `FLYWHEEL.md` | Integration design doc |
 
 ---
 
