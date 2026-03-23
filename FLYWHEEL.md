@@ -26,15 +26,6 @@ Stage 5: template_refiner  → read all KB patterns, propose surgical diffs to
 
 Stages 4 and 5 are independent. The query results from Stage 4 are not consumed by Stage 5. The refiner always reads the full KB directly.
 
-**What has been validated by running this:**
-- End-to-end ingestion: a playtesting session → structured patterns in the KB
-- Dedup works: 57 patterns stored from 7+ games, duplicates suppressed at 0.92 cosine threshold
-- Query retrieval: given "third-person platformer, collect coins on floating islands", the top results are semantically relevant (e.g., sim=0.891 for the unresponsive-controls anti-pattern)
-- Refiner proposes real diffs: 5 proposed changes across `instructions.md` and `quality_defaults.md` from a single run over 57 patterns, all with traceable `source_game_ids` and `pattern_ids`
-- Conflict detection and confidence flagging work as designed
-
-**What is not validated yet:** whether injecting retrieved patterns into codegen actually improves game quality. That requires production integration.
-
 ---
 
 ## What it should do in production (features to add)
